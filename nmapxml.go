@@ -6,9 +6,9 @@ import (
 	"os"
 )
 
-// Readfile reads and nmap XML file
+// Readfile reads an nmap XML file
+// Takes filename as string.
 //
-// Takes filename as string
 //
 // Returns
 //

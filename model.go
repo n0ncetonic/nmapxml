@@ -157,7 +157,9 @@ type Table struct {
 // Times contains latency information of a scanned host
 //
 // Srtt == Smoothed Averaged Round Trip Time
-// RTT == Round Trip TIme
+//
+// RTT == Round Trip Time
+//
 // To == ?
 type Times struct {
 	XMLName xml.Name `xml:"times" json:"-"`
