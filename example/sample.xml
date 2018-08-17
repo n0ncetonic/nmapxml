@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="file:///usr/local/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Thu Aug  2 22:13:45 2018 as: nmap -oX nmapeXaMpL.xml -Pn -sC -p1-65535 blacksunhackers.club -->
+<nmaprun scanner="nmap" args="nmap -oX nmapeXaMpL.xml -Pn -sC -p1-65535 blacksunhackers.club" start="1533273225" startstr="Thu Aug  2 22:13:45 2018" version="7.70" xmloutputversion="1.04">
+    <scaninfo type="connect" protocol="tcp" numservices="65535" services="1-65535" />
+    <verbose level="0" />
+    <debugging level="0" />
+    <host starttime="1533273226" endtime="1533273333">
+        <status state="up" reason="user-set" reason_ttl="0" />
+        <address addr="185.199.108.153" addrtype="ipv4" />
+        <hostnames>
+            <hostname name="blacksunhackers.club" type="user" />
+        </hostnames>
+        <ports>
+            <extraports state="filtered" count="65533">
+                <extrareasons reason="no-responses" count="65533" />
+            </extraports>
+            <port protocol="tcp" portid="80">
+                <state state="open" reason="syn-ack" reason_ttl="0" />
+                <service name="http" method="table" conf="3" />
+                <script id="http-title" output="Did not follow redirect to https://blacksunhackers.club/">
+                    <elem key="redirect_url">https://blacksunhackers.club/</elem>
+                </script>
+            </port>
+            <port protocol="tcp" portid="443">
+                <state state="open" reason="syn-ack" reason_ttl="0" />
+                <service name="https" method="table" conf="3" />
+                <script id="http-title" output="          Blacksun Hackers Club &amp;middot;       ">
+                    <elem key="title">
+    
+      Blacksun Hackers Club &amp;middot; 
+    
+  </elem>
+                </script>
+                <script id="ssl-cert" output="Subject: commonName=blacksunhackers.club&#xA;Subject Alternative Name: DNS:blacksunhackers.club&#xA;Not valid before: 2018-07-19T08:06:53&#xA;Not valid after:  2018-10-17T08:06:53">
+                    <table key="subject">
+                        <elem key="commonName">blacksunhackers.club</elem>
+                    </table>
+                    <table key="issuer">
+                        <elem key="organizationName">Let's Encrypt</elem>
+                        <elem key="countryName">US</elem>
+                        <elem key="commonName">Let's Encrypt Authority X3</elem>
+                    </table>
+                    <table key="pubkey">
+                        <elem key="bits">2048</elem>
+                        <elem key="type">rsa</elem>
+                        <elem key="modulus">userdata: 0x7fbcd9810dd8</elem>
+                        <elem key="exponent">userdata: 0x7fbcd98274c8</elem>
+                    </table>
+                    <table key="extensions">
+                        <table>
+                            <elem key="critical">true</elem>
+                            <elem key="value">Digital Signature, Key Encipherment</elem>
+                            <elem key="name">X509v3 Key Usage</elem>
+                        </table>
+                        <table>
+                            <elem key="value">TLS Web Server Authentication, TLS Web Client Authentication</elem>
+                            <elem key="name">X509v3 Extended Key Usage</elem>
+                        </table>
+                        <table>
+                            <elem key="critical">true</elem>
+                            <elem key="value">CA:FALSE</elem>
+                            <elem key="name">X509v3 Basic Constraints</elem>
+                        </table>
+                        <table>
+                            <elem key="value">63:4E:15:85:56:5A:A4:94:02:C2:16:42:A4:A5:97:9A:38:02:57:97</elem>
+                            <elem key="name">X509v3 Subject Key Identifier</elem>
+                        </table>
+                        <table>
+                            <elem key="value">keyid:A8:4A:6A:63:04:7D:DD:BA:E6:D1:39:B7:A6:45:65:EF:F3:A8:EC:A1
+</elem>
+                            <elem key="name">X509v3 Authority Key Identifier</elem>
+                        </table>
+                        <table>
+                            <elem key="value">OCSP - URI:http://ocsp.int-x3.letsencrypt.org
+CA Issuers - URI:http://cert.int-x3.letsencrypt.org/
+</elem>
+                            <elem key="name">Authority Information Access</elem>
+                        </table>
+                        <table>
+                            <elem key="value">DNS:blacksunhackers.club</elem>
+                            <elem key="name">X509v3 Subject Alternative Name</elem>
+                        </table>
+                        <table>
+                            <elem key="value">Policy: 2.23.140.1.2.1
+Policy: 1.3.6.1.4.1.44947.1.1.1
+  CPS: http://cps.letsencrypt.org
+  User Notice:
+    Explicit Text: This Certificate may only be relied upon by Relying Parties and only in accordance with the Certificate Policy found at https://letsencrypt.org/repository/
+</elem>
+                            <elem key="name">X509v3 Certificate Policies</elem>
+                        </table>
+                        <table>
+                            <elem key="value">Signed Certificate Timestamp:
+    Version   : v1(0)
+    Log ID    : 29:3C:51:96:54:C8:39:65:BA:AA:50:FC:58:07:D4:B7:
+                6F:BF:58:7A:29:72:DC:A4:C3:0C:F4:E5:45:47:F4:78
+    Timestamp : Jul 19 09:06:53.511 2018 GMT
+    Extensions: none
+    Signature : ecdsa-with-SHA256
+                30:45:02:21:00:8A:36:C2:DB:F5:D4:2E:2A:DE:43:A9:
+                9C:FE:11:44:0C:92:81:4D:A8:18:26:29:F1:C6:EE:28:
+                3F:D9:0D:A7:DF:02:20:5D:3A:83:82:4F:77:53:57:DC:
+                FF:61:AF:26:46:80:7A:B8:A0:A6:27:90:54:6A:DE:B7:
+                3F:AC:02:8B:68:25:0B
+Signed Certificate Timestamp:
+    Version   : v1(0)
+    Log ID    : 55:81:D4:C2:16:90:36:01:4A:EA:0B:9B:57:3C:53:F0:
+                C0:E4:38:78:70:25:08:17:2F:A3:AA:1D:07:13:D3:0C
+    Timestamp : Jul 19 09:06:54.310 2018 GMT
+    Extensions: none
+    Signature : ecdsa-with-SHA256
+                30:45:02:21:00:CC:35:F6:31:78:9B:D0:BD:48:EA:DD:
+                CA:18:81:85:F1:16:83:66:DF:9F:C0:4D:A1:BF:0B:61:
+                A4:3A:B7:8A:70:02:20:03:00:13:BA:F1:82:45:56:F7:
+                0C:06:37:A3:C3:20:0F:5A:06:C9:B0:5A:90:C0:54:F0:
+                81:9D:0C:17:C9:F2:A7</elem>
+                            <elem key="name">CT Precertificate SCTs</elem>
+                        </table>
+                    </table>
+                    <elem key="sig_algo">sha256WithRSAEncryption</elem>
+                    <table key="validity">
+                        <elem key="notBefore">2018-07-19T08:06:53</elem>
+                        <elem key="notAfter">2018-10-17T08:06:53</elem>
+                    </table>
+                    <elem key="md5">dd54d84c16e7dee358b58a34e549ceeb</elem>
+                    <elem key="sha1">1392da661e60f8cfb68c56e75238bf331150e14c</elem>
+                    <elem key="pem">-----BEGIN CERTIFICATE-----
+MIIGEzCCBPugAwIBAgISAyu6mRQR3quzjuYuybKiHVeMMA0GCSqGSIb3DQEBCwUA
+MEoxCzAJBgNVBAYTAlVTMRYwFAYDVQQKEw1MZXQncyBFbmNyeXB0MSMwIQYDVQQD
+ExpMZXQncyBFbmNyeXB0IEF1dGhvcml0eSBYMzAeFw0xODA3MTkwODA2NTNaFw0x
+ODEwMTcwODA2NTNaMB8xHTAbBgNVBAMTFGJsYWNrc3VuaGFja2Vycy5jbHViMIIB
+IjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAq8cbDO3GAfjqqbPPCBdPost8
+NMRmEubv85gXecll7mZMH5qSfTPuB/ouFWL3tPMf1U8usWeoSUK/48yatzBGwmj1
+KKlkaW9MS2QkydztRp+kH8LvbzbQvGknuOLWGHBALLT17o/3DYxuA5LnXdY+vLvJ
+WygQoFr2N/XhnhUjcm6OaQEJpIykydfbBQGQSEuQIIw4egpgdHkYJjCOYAsXuSSg
+gN8/FADTCec0RzVjfFTSoJ3hV9HLE9M8MCSXjuo0AJ/MbAxq91S8XmDcRjHCCd7Z
+w+NjHo8cxZCQ6NqGvn3xwx8ahmmbC+CyDEcIyJJZK2Yv+qE4oS8QZfaX/RaHMwID
+AQABo4IDHDCCAxgwDgYDVR0PAQH/BAQDAgWgMB0GA1UdJQQWMBQGCCsGAQUFBwMB
+BggrBgEFBQcDAjAMBgNVHRMBAf8EAjAAMB0GA1UdDgQWBBRjThWFVlqklALCFkKk
+pZeaOAJXlzAfBgNVHSMEGDAWgBSoSmpjBH3duubRObemRWXv86jsoTBvBggrBgEF
+BQcBAQRjMGEwLgYIKwYBBQUHMAGGImh0dHA6Ly9vY3NwLmludC14My5sZXRzZW5j
+cnlwdC5vcmcwLwYIKwYBBQUHMAKGI2h0dHA6Ly9jZXJ0LmludC14My5sZXRzZW5j
+cnlwdC5vcmcvMB8GA1UdEQQYMBaCFGJsYWNrc3VuaGFja2Vycy5jbHViMIH+BgNV
+HSAEgfYwgfMwCAYGZ4EMAQIBMIHmBgsrBgEEAYLfEwEBATCB1jAmBggrBgEFBQcC
+ARYaaHR0cDovL2Nwcy5sZXRzZW5jcnlwdC5vcmcwgasGCCsGAQUFBwICMIGeDIGb
+VGhpcyBDZXJ0aWZpY2F0ZSBtYXkgb25seSBiZSByZWxpZWQgdXBvbiBieSBSZWx5
+aW5nIFBhcnRpZXMgYW5kIG9ubHkgaW4gYWNjb3JkYW5jZSB3aXRoIHRoZSBDZXJ0
+aWZpY2F0ZSBQb2xpY3kgZm91bmQgYXQgaHR0cHM6Ly9sZXRzZW5jcnlwdC5vcmcv
+cmVwb3NpdG9yeS8wggEEBgorBgEEAdZ5AgQCBIH1BIHyAPAAdgApPFGWVMg5Zbqq
+UPxYB9S3b79Yeily3KTDDPTlRUf0eAAAAWSxysXHAAAEAwBHMEUCIQCKNsLb9dQu
+Kt5DqZz+EUQMkoFNqBgmKfHG7ig/2Q2n3wIgXTqDgk93U1fc/2GvJkaAerigpieQ
+VGretz+sAotoJQsAdgBVgdTCFpA2AUrqC5tXPFPwwOQ4eHAlCBcvo6odBxPTDAAA
+AWSxysjmAAAEAwBHMEUCIQDMNfYxeJvQvUjq3coYgYXxFoNm35/ATaG/C2GkOreK
+cAIgAwATuvGCRVb3DAY3o8MgD1oGybBakMBU8IGdDBfJ8qcwDQYJKoZIhvcNAQEL
+BQADggEBAHh5CSNFfVRM1TSNwFkxudpi5oRMhn3YupiRz+wX5Qs3VF08nXjq4YIt
+YHRC08nbRdfHMKXEBvThU5ufP5h/KpVnhSExhex3NirGCwii72k+GB4JnN/XIw1m
+NDSd0qM1jhPJkPDTGsIlgtvCll74YTGFKYZok/nPEXhtLbYZiJVj5nSysHSyWgXN
+G3/5BMcMHSwDfSrN7tSRtRg++lgaR+mlXMBvIIDhBEVUZyYb6AiZ3PSkbu2o5SiD
+4RAp5CCSOh0+N98ucJAW47AsO3ZDmRIyl6UA56gGtX2kB1E1GxtPGr5qnmn+9BfY
+IekZtZjFbxf7aBDjMtFZP4zSfMdnhbo=
+-----END CERTIFICATE-----
+</elem>
+                </script>
+                <script id="ssl-date" output="TLS randomness does not represent time"></script>
+                <script id="tls-alpn" output="&#xA;  h2&#xA;  http/1.1">
+                    <elem>h2</elem>
+                    <elem>http/1.1</elem>
+                </script>
+            </port>
+        </ports>
+        <times srtt="5836" rttvar="1725" to="100000" />
+    </host>
+    <runstats>
+        <finished time="1533273333" timestr="Thu Aug  2 22:15:33 2018" elapsed="107.77" summary="Nmap done at Thu Aug  2 22:15:33 2018; 1 IP address (1 host up) scanned in 107.77 seconds" exit="success" />
+        <hosts up="1" down="0" total="1" />
+    </runstats>
+</nmaprun>
